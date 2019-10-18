@@ -1,43 +1,53 @@
 import React, { Fragment } from 'react';
-import Sticky from 'react-stickynode';
 import { ThemeProvider } from 'styled-components';
-import { rideTheme } from 'common/src/theme/ride';
-import { ResetCSS } from 'common/src/assets/css/style';
-import { GlobalStyle, ContentWrapper } from '../containers/Ride/ride.style';
+import Sticky from 'react-stickynode';
 import { DrawerProvider } from 'common/src/contexts/DrawerContext';
-import Navbar from '../containers/Ride/Navbar';
-import Banner from '../containers/Ride/Banner';
-import RideOption from '../containers/Ride/RideOption';
-import LocationSection from '../containers/Ride/LocationSelection';
-import FeatureSection from '../containers/Ride/Feature';
-import LatestNewsSection from '../containers/Ride/LatestNews';
-import HowItWorkSection from '../containers/Ride/HowItWorks';
-// import TestimonialSection from '../containers/Ride/TestimonialSection';
-import FeatureSlider from '../containers/Ride/FeatureSlider';
-import Footer from '../containers/Ride/Footer';
+import { saasModernTheme } from 'common/src/theme/saasModern';
+import { ResetCSS } from 'common/src/assets/css/style';
+import {
+  GlobalStyle,
+  ContentWrapper,
+} from '../containers/SaasModern/sassModern.style';
+
+import BannerSection from '../containers/SaasModern/Banner';
+import Navbar from '../containers/SaasModern/Navbar';
+import WorkingProcessSection from '../containers/SaasModern/WorkingProcess';
+import PricingSection from '../containers/SaasModern/Pricing';
+import PartnerSection from '../containers/SaasModern/Partner';
+import FaqSection from '../containers/SaasModern/Faq';
+import TrialSection from '../containers/SaasModern/Trial';
+import InfoSection from '../containers/SaasModern/Info';
+import FeatureSection from '../containers/SaasModern/Feature';
+import UpdateScreen from '../containers/SaasModern/UpdateScreen';
+import TestimonialSection from '../containers/SaasModern/Testimonial';
+import Footer from '../containers/SaasModern/Footer';
 import SEO from '../components/seo';
 
 export default () => {
   return (
-    <ThemeProvider theme={rideTheme}>
+    <ThemeProvider theme={saasModernTheme}>
       <Fragment>
-        <SEO title="Ride | A react next landing page" />
+        <SEO title="Papercut Receipts" />
+
         <ResetCSS />
         <GlobalStyle />
+
         <ContentWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <DrawerProvider>
               <Navbar />
             </DrawerProvider>
           </Sticky>
-          <Banner />
-          <RideOption />
-          <LocationSection />
-          <FeatureSlider />
+          <BannerSection />
+          <WorkingProcessSection />
+          <InfoSection />
           <FeatureSection />
-          <LatestNewsSection />
-          <HowItWorkSection />
-          {/* <TestimonialSection /> */}
+          {/* <UpdateScreen /> */}
+          {/* <PricingSection />
+          <PartnerSection />
+          <TestimonialSection />
+          <FaqSection /> */}
+          <TrialSection />
           <Footer />
         </ContentWrapper>
       </Fragment>
