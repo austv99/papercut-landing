@@ -11,10 +11,10 @@ import Container from 'common/src/components/UI/Container';
 import { DrawerContext } from 'common/src/contexts/DrawerContext';
 import ScrollSpyMenu from 'common/src/components/ScrollSpyMenu';
 
-import LogoImage from 'common/src/assets/image/saasModern/logo.png';
-import LogoImageAlt from 'common/src/assets/image/saasModern/logo.png';
+import LogoImage from 'common/src/assets/image/saasModern/papercut_logo_box.png';
+import LogoImageAlt from 'common/src/assets/image/saasModern/papercut_logo_box.png';
 
-const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
+const Navbar = ({ navbarStyle, logoStyle, logoWrapper, button, row, menuWrapper }) => {
   const Data = useStaticQuery(graphql`
     query {
       saasModernJson {
@@ -40,20 +40,22 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
     <NavbarWrapper {...navbarStyle} className="saas_navbar">
       <Container>
         <Box {...row}>
-          <Logo
-            href="/"
-            logoSrc={LogoImage}
-            title="Portfolio"
-            logoStyle={logoStyle}
-            className="main-logo"
-          />
-          <Logo
-            href="/"
-            logoSrc={LogoImageAlt}
-            title="Portfolio"
-            logoStyle={logoStyle}
-            className="logo-alt"
-          />
+          <Box  {...logoWrapper}>
+            <Logo
+              href="/"
+              logoSrc={LogoImage}
+              title="Portfolio"
+              logoStyle={logoStyle}
+              className="main-logo"
+            />
+            <Logo
+              href="/"
+              logoSrc={LogoImageAlt}
+              title="Portfolio"
+              logoStyle={logoStyle}
+              className="logo-alt"
+            />
+          </Box>
           <Box {...menuWrapper}>
             <ScrollSpyMenu
               className="main_menu"
@@ -61,7 +63,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
               offset={-70}
             />
             <a href="#1" className="navbar_button">
-              <Button {...button} title="GET STARTED" />
+              <Button {...button} title="SIGN UP FOR UPDATES" />
             </a>
             <Drawer
               width="420px"
@@ -77,7 +79,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
                 offset={-100}
               />
               <a href="#1" className="navbar_drawer_button">
-                <Button {...button} title="GET STARTED" />
+                <Button {...button} title="SIGN UP FOR UPDATES" />
               </a>
             </Drawer>
           </Box>
@@ -90,6 +92,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
 Navbar.propTypes = {
   navbarStyle: PropTypes.object,
   logoStyle: PropTypes.object,
+  logoWrapper: PropTypes.object,
   button: PropTypes.object,
   row: PropTypes.object,
   menuWrapper: PropTypes.object,
@@ -108,6 +111,12 @@ Navbar.defaultProps = {
   },
   logoStyle: {
     maxWidth: ['120px', '130px'],
+
+  },
+  logoWrapper: {
+    backgroundColor: 'white',
+    padding: '10px',
+
   },
   button: {
     type: 'button',

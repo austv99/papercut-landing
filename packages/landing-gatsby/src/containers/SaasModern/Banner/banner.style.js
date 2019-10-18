@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import BannerBG from 'common/src/assets/image/saasModern/banner-texture.png';
 
 export const BannerWrapper = styled.section`
-  padding: 150px 0 50px 0;
+  padding: 135px 0 50px 0;
   background-image: url(${BannerBG}),
-    linear-gradient(35deg, rgb(147, 249, 185) 0%, rgb(29, 151, 108) 100%);
+    linear-gradient(35deg, rgb(147, 249, 185) 0%, rgb(29, 151, 108) 70%);
   background-size: cover;
   background-position: top center;
   @media (max-width: 575px) {
@@ -12,7 +12,8 @@ export const BannerWrapper = styled.section`
   }
 
   img {
-    max-width: 100%;
+    position: absolute;
+    margin-left: 70px;
     height: manual;
     display: block;
   }

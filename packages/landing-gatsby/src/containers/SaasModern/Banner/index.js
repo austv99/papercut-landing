@@ -13,6 +13,7 @@ import TiltShape from '../TiltShape';
 import Input from 'reusecore/src/elements/Input';
 import { BannerWrapper, EmailInputWrapper } from './banner.style';
 import { ic_play_circle_filled } from 'react-icons-kit/md/ic_play_circle_filled';
+import { visible } from 'ansi-colors';
 
 const BannerSection = ({
   row,
@@ -55,17 +56,19 @@ const BannerSection = ({
             </DiscountWrapper> */}
             <Heading
               {...title}
-              content="A digital platform for your receipts"
+              content="Ride the new wave of Papercut digital receipts"
             />
             <Text
               {...description}
-              content="Physical receipts are no more! A convenient platform where you can access all your receipts at anytime. It's friendly to you and trees!"
+              content="Physical receipts? Obsolete.
+              A convenient platform where you can access all your digital receipts at anytime, anywhere from our website. Sent straight from the retailer to you. It's friendly to you and the trees!
+              "
             />
             <Box {...buttonWrapper}>
               <a href="#1">
-                <Button {...fillButton} title="GET STARTED" />
+                <Button {...fillButton} title="SIGN UP FOR UPDATES" />
               </a>
-              {/* <EmailInputWrapper>
+              { /*<EmailInputWrapper>
               <Input
                 inputType="email"
                 placeholder="Enter Email Address"
@@ -75,7 +78,7 @@ const BannerSection = ({
               <a href="#fare_section">
                 <Button title="Text me a link" {...button} />
               </a>
-            </EmailInputWrapper> */}
+              </EmailInputWrapper> */}
               {/* <a href="#1">
                 <Button
                   {...button}
@@ -87,12 +90,10 @@ const BannerSection = ({
             </Box>
           </Box>
           <Box {...imageWrapper}>
-            <Fade bottom>
               <Image
                 fluid={Data.bannerImage.childImageSharp.fluid}
                 alt="banner image"
               />
-            </Fade>
           </Box>
         </Box>
       </Container>
@@ -118,14 +119,19 @@ BannerSection.defaultProps = {
     flexBox: true,
     flexWrap: 'wrap',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
   },
   contentWrapper: {
     width: ['100%', '100%', '80%', '55%', '50%'],
     mb: '160px',
   },
   imageWrapper: {
-    width: '50%',
+    // From smallest size screen (mobile to largest (desktop)) 1st index - mobile 5th- desktop.
+    // Alter these values to see changes on each screen resolution
+    mr: ['-50px', '-150px', '-150px', '-150px', '-170px'],
+    ml: ['220px', '220px', '250px', '0px', '0px'],
+    mt: ['-200px', '-150px', '-150px', '0px', '-30px'],
+    width: ['100%', '80%', '80%', '60%', '60%'],
   },
   title: {
     fontSize: ['24px', '32px', '40px', '42px', '46px'],
