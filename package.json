@@ -28,8 +28,7 @@
     "packages/reusecore"
   ],
   "scripts": {
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "clean": "lerna clean --yes && rimraf node_modules",
     "start": "lerna run --parallel dev",
     "preweb": "cpx \"packages/common/src/assets/image/**/*.*\" \"packages/landing/static\" -C",
