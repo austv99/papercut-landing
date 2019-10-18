@@ -9,6 +9,7 @@
     "type": "git",
     "url": ""
   },
+  "homepage": "https://papercutreceipts.com",
   "devDependencies": {
     "@babel/cli": "^7.5.0",
     "cpx": "^1.5.0",
@@ -27,6 +28,8 @@
     "packages/reusecore"
   ],
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b master -d build",
     "clean": "lerna clean --yes && rimraf node_modules",
     "start": "lerna run --parallel dev",
     "preweb": "cpx \"packages/common/src/assets/image/**/*.*\" \"packages/landing/static\" -C",
