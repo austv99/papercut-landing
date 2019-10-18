@@ -5,6 +5,7 @@
   "private": true,
   "author": "RedQ Team",
   "license": "",
+  "homepage": "https://papercutreceipts.com",
   "repository": {
     "type": "git",
     "url": ""
@@ -27,6 +28,8 @@
     "packages/reusecore"
   ],
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b master -d build",
     "clean": "lerna clean --yes && rimraf node_modules",
     "start": "lerna run --parallel dev",
     "preweb": "cpx \"packages/common/src/assets/image/**/*.*\" \"packages/landing/static\" -C",
@@ -62,5 +65,8 @@
       "prettier --trailing-comma es5 --single-quote --write",
       "git add"
     ]
+  },
+  "dependencies": {
+    "gh-pages": "^2.1.1"
   }
 }
