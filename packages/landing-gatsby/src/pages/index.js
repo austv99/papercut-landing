@@ -1,53 +1,43 @@
 import React, { Fragment } from 'react';
-import { ThemeProvider } from 'styled-components';
 import Sticky from 'react-stickynode';
-import { DrawerProvider } from 'common/src/contexts/DrawerContext';
-import { saasModernTheme } from 'common/src/theme/saasModern';
+import { ThemeProvider } from 'styled-components';
+import { rideTheme } from 'common/src/theme/ride';
 import { ResetCSS } from 'common/src/assets/css/style';
-import {
-  GlobalStyle,
-  ContentWrapper,
-} from '../containers/SaasModern/sassModern.style';
-
-import BannerSection from '../containers/SaasModern/Banner';
-import Navbar from '../containers/SaasModern/Navbar';
-import WorkingProcessSection from '../containers/SaasModern/WorkingProcess';
-import PricingSection from '../containers/SaasModern/Pricing';
-import PartnerSection from '../containers/SaasModern/Partner';
-import FaqSection from '../containers/SaasModern/Faq';
-import TrialSection from '../containers/SaasModern/Trial';
-import InfoSection from '../containers/SaasModern/Info';
-import FeatureSection from '../containers/SaasModern/Feature';
-import UpdateScreen from '../containers/SaasModern/UpdateScreen';
-import TestimonialSection from '../containers/SaasModern/Testimonial';
-import Footer from '../containers/SaasModern/Footer';
+import { GlobalStyle, ContentWrapper } from '../containers/Ride/ride.style';
+import { DrawerProvider } from 'common/src/contexts/DrawerContext';
+import Navbar from '../containers/Ride/Navbar';
+import Banner from '../containers/Ride/Banner';
+import RideOption from '../containers/Ride/RideOption';
+import LocationSection from '../containers/Ride/LocationSelection';
+import FeatureSection from '../containers/Ride/Feature';
+import LatestNewsSection from '../containers/Ride/LatestNews';
+import HowItWorkSection from '../containers/Ride/HowItWorks';
+// import TestimonialSection from '../containers/Ride/TestimonialSection';
+import FeatureSlider from '../containers/Ride/FeatureSlider';
+import Footer from '../containers/Ride/Footer';
 import SEO from '../components/seo';
 
 export default () => {
   return (
-    <ThemeProvider theme={saasModernTheme}>
+    <ThemeProvider theme={rideTheme}>
       <Fragment>
-        <SEO title="Papercut Receipts" />
-
+        <SEO title="Ride | A react next landing page" />
         <ResetCSS />
         <GlobalStyle />
-
         <ContentWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <DrawerProvider>
               <Navbar />
             </DrawerProvider>
           </Sticky>
-          <BannerSection />
-          <WorkingProcessSection />
-          <InfoSection />
+          <Banner />
+          <RideOption />
+          <LocationSection />
+          <FeatureSlider />
           <FeatureSection />
-          {/* <UpdateScreen /> */}
-          {/* <PricingSection />
-          <PartnerSection />
-          <TestimonialSection />
-          <FaqSection /> */}
-          <TrialSection />
+          <LatestNewsSection />
+          <HowItWorkSection />
+          {/* <TestimonialSection /> */}
           <Footer />
         </ContentWrapper>
       </Fragment>
