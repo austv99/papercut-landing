@@ -43,6 +43,23 @@
       "description": "That's it! We'll handle it from here. All your receipts will be stored and accessible at anytime!"
     }
   ],
+  "FEATURE_HIGH": [
+    {
+      "image": "../../assets/image/saasModern/process-1.svg",
+      "title": "Digitalise to Minimise",
+      "description": "Paper receipts are easily lost and fade quickly. Minimise your issues when it comes to returns and warranties by going digital."
+    },
+    {
+      "image": "../../assets/image/saasModern/process-2.svg",
+      "title": "Seamless Sharing",
+      "description": "Export your digital receipts to friends. Simplify your work reimbursement and tax claims. "
+    },
+    {
+      "image": "../../assets/image/saasModern/process-3.svg",
+      "title": "Go Green",
+      "description": "12.4 million trees are cut down each year for paper receipts. That is ⅓ of the Daintree rainforest!"
+    }
+  ],
   "MONTHLY_PRICING_TABLE": [
     {
       "freePlan": true,

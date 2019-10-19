@@ -12,6 +12,7 @@ import {
 import BannerSection from '../containers/SaasModern/Banner';
 import Navbar from '../containers/SaasModern/Navbar';
 import WorkingProcessSection from '../containers/SaasModern/WorkingProcess';
+import FeatureHighSection from '../containers/SaasModern/FeatureHigh';
 import PricingSection from '../containers/SaasModern/Pricing';
 import PartnerSection from '../containers/SaasModern/Partner';
 import FaqSection from '../containers/SaasModern/Faq';
@@ -39,9 +40,10 @@ export default () => {
             </DrawerProvider>
           </Sticky>
           <BannerSection />
+          <FeatureHighSection />
           <WorkingProcessSection />
-          <InfoSection />
-          <FeatureSection />
+          {/* <InfoSection /> */}
+          {/* <FeatureSection /> */}
           {/* <UpdateScreen /> */}
           {/* <PricingSection />
           <PartnerSection />
