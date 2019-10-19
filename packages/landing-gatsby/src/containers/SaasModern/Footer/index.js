@@ -37,33 +37,25 @@ const Footer = ({
     <FooterWrapper>
       <Container className="footer_container">
         <Box className="row" {...row}>
-          <Box {...colOne}>
+          <Box right {...colOne}>
             <Logo
               href="#"
               logoSrc={LogoImage}
               title="Hosting"
               logoStyle={logoStyle}
             />
-            <Text content="hello@redq.io" {...textStyle} />
-            <Text content="+479-443-9334" {...textStyle} />
+            <Text content="Contact Us" {...titleStyle}/>
+            <div>
+              <img src="https://cdn2.iconfinder.com/data/icons/social-icons-color/512/gmail-512.png" width="10px" />
+              <Text font-size="3px" content="papercutreceipts@gmail.com" {...textStyle} />
+            </div>
+            <div>
+              <img src="https://www.pinclipart.com/picdir/middle/2-21918_download-transparent-background-facebook-logo-clipart-facebook-logo.png" width="10px" />
+              <Text font-size="3px" content="facebook.com/papercutreceipts/" {...textStyle} />
+            </div>
           </Box>
           {/* End of footer logo column */}
-          <Box {...colTwo}>
-            {Data.saasModernJson.FOOTER_WIDGET.map((widget, index) => (
-              <Box className="col" {...col} key={`footer-widget-${index}`}>
-                <Heading content={widget.title} {...titleStyle} />
-                <List>
-                  {widget.menuItems.map((item, index) => (
-                    <ListItem key={`footer-list-item-${index}`}>
-                      <a href={item.url} className="ListItem">
-                        {item.text}
-                      </a>
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            ))}
-          </Box>
+          
           {/* End of footer List column */}
         </Box>
       </Container>
@@ -126,8 +118,8 @@ Footer.defaultProps = {
   },
   // widget text default style
   textStyle: {
-    color: '#0f2137',
-    fontSize: '16px',
+    color: '#98989C',
+    fontSize: '12px',
     mb: '10px',
   },
 };

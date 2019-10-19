@@ -134,6 +134,7 @@ BannerSection.defaultProps = {
     justifyContent: 'space-between',
   },
   contentWrapper: {
+    mt: ['40px', '0px', '0px', '0px', '0px'],
     width: ['100%', '100%', '80%', '55%', '50%'],
     mb: '160px',
   },
@@ -191,6 +192,8 @@ BannerSection.defaultProps = {
     flexBox: true,
     justifyContent: 'center',
     mt: '35px',
+    margin: '0 auto',
+    ml: ['55px', '0px', '0px', '0px', '0px'],
   },
   button: {
     type: 'button',

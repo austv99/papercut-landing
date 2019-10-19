@@ -111,6 +111,8 @@ TrialSection.defaultProps = {
   buttonWrapper: {
     flexBox: true,
     justifyContent: 'center',
+    margin: '0 auto',
+    ml: ['55px', '0px', '0px', '0px', '0px'],
   },
   btnStyle: {
     minWidth: '156px',
