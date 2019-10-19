@@ -14,6 +14,7 @@ import Input from 'reusecore/src/elements/Input';
 import { BannerWrapper, EmailInputWrapper } from './banner.style';
 import { ic_play_circle_filled } from 'react-icons-kit/md/ic_play_circle_filled';
 import { visible } from 'ansi-colors';
+import MailChimp from 'react-mailchimp-form';
 
 const BannerSection = ({
   row,
@@ -65,9 +66,20 @@ const BannerSection = ({
               "
             />
             <Box {...buttonWrapper}>
-              <a href="#1">
+              {/* <a href="#1">
                 <Button {...fillButton} title="SIGN UP FOR UPDATES" />
-              </a>
+              </a> */}
+              <MailChimp
+                action='https://gmail.us20.list-manage.com/subscribe/post?u=132aadd2b04552c5ee5fb227e&amp;id=052ebd6e4d'
+                fields={[
+                  {
+                    name: 'EMAIL',
+                    placeholder: 'Email',
+                    type: 'email',
+                    required: true
+                  }
+                ]}
+                />
               { /*<EmailInputWrapper>
               <Input
                 inputType="email"

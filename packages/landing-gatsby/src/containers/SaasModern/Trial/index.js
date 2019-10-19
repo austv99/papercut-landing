@@ -38,12 +38,13 @@ const TrialSection = ({
               content="Of course you are! Get started on this journey to a greener and more convenient shopping experience by filling out this quick form. We'll let you know when it's ready!"
             />
             <Box {...buttonWrapper}>
-              <Button title="JOIN WITH SLACK" {...btnStyle} />
+              {/* <Button title="JOIN WITH SLACK" {...btnStyle} />
               <Button
                 title="Login with Email"
                 variant="textButton"
                 {...outlineBtnStyle}
-              />
+              /> */}
+              
             </Box>
           </Box>
         </Box>
