@@ -84,6 +84,7 @@ WorkingProcessSection.propTypes = {
 WorkingProcessSection.defaultProps = {
   sectionWrapper: {
     pt: ['60px', '15px', '15px', '15px', '15px'],
+    mt: ['90px', '25px', '25px', '120px', '120px'],
     pb: 0,
   },
   secTitleWrapper: {
