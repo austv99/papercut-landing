@@ -84,6 +84,7 @@ FeatureHighSection.propTypes = {
 FeatureHighSection.defaultProps = {
   sectionWrapper: {
     pt: ['60px', '15px', '15px', '15px', '15px'],
+    mt: ['-90px', '-25px', '-25px', '-120px', '-145px'],
     pb: 0,
   },
   secTitleWrapper: {

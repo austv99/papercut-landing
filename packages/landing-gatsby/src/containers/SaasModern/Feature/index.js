@@ -117,6 +117,7 @@ FeatureSection.defaultProps = {
     flexWrap: 'wrap',
     ml: ['-30px', '-30px', '-30px', '-30px', '-30px'],
     mr: ['-30px', '-30px', '-30px', '-30px', '-45px'],
+    mt: ['-90px', '-25px', '-25px', '-120px', '-145px'],
   },
   col: {
     width: [1, 1 / 2, 1 / 2, 1 / 3],

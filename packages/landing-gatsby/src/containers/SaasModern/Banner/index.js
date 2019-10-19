@@ -140,9 +140,9 @@ BannerSection.defaultProps = {
   imageWrapper: {
     // From smallest size screen (mobile to largest (desktop)) 1st index - mobile 5th- desktop.
     // Alter these values to see changes on each screen resolution
-    mr: ['-50px', '-150px', '-150px', '-150px', '-170px'],
-    ml: ['220px', '220px', '250px', '0px', '0px'],
-    mt: ['-200px', '-150px', '-150px', '0px', '-30px'],
+    mr: ['-200px', '-150px', '-150px', '-150px', '-170px', '-300px'],
+    ml: ['30px', '220px', '250px', '0px', '0px'],
+    mt: ['-120px', '-150px', '-150px', '0px', '-30px'],
     width: ['100%', '80%', '80%', '60%', '60%'],
   },
   title: {
