@@ -8,17 +8,17 @@
   ],
   "PROCESS_ITEMS": [
     {
-      "image": "../../assets/image/saasModern/process-1.svg",
+      "image": "../../assets/image/saasModern/account.png",
       "title": "Create a free account",
       "description": "Easy signup with Google/Facebook/Email. Your receipts will be stored in your own account and only visible by you and who you share it to."
     },
     {
-      "image": "../../assets/image/saasModern/process-2.svg",
+      "image": "../../assets/image/saasModern/5.png",
       "title": "Visit a participating retailer",
       "description": "All it takes is a simple QR code scan at the checkout then you're on your way -  no paper, no fuss."
     },
     {
-      "image": "../../assets/image/saasModern/process-3.svg",
+      "image": "../../assets/image/saasModern/6.png",
       "title": "Enjoy a paperless shopping future!",
       "description": "That's it! We'll handle it from here. All your receipts will be stored and accessible at anytime!"
     }
