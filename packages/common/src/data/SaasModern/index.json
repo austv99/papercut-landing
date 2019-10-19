@@ -4,26 +4,6 @@
       "label": "Home",
       "path": "#banner_section",
       "offset": "0"
-    },
-    {
-      "label": "Features",
-      "path": "#feature_section",
-      "offset": "0"
-    },
-    {
-      "label": "Pricing",
-      "path": "#pricing_section",
-      "offset": "0"
-    },
-    {
-      "label": "hi",
-      "path": "#testimonial_section",
-      "offset": "0"
-    },
-    {
-      "label": "FAQ",
-      "path": "#faq_section",
-      "offset": "0"
     }
   ],
   "PROCESS_ITEMS": [
@@ -45,17 +25,17 @@
   ],
   "FEATURE_HIGH": [
     {
-      "image": "../../assets/image/saasModern/process-1.svg",
+      "image": "../../assets/image/saasModern/1.png",
       "title": "Digitalise to Minimise",
       "description": "Paper receipts are easily lost and fade quickly. Minimise your issues when it comes to returns and warranties by going digital."
     },
     {
-      "image": "../../assets/image/saasModern/process-2.svg",
+      "image": "../../assets/image/saasModern/seamless.png",
       "title": "Seamless Sharing",
       "description": "Export your digital receipts. Share with friends. Simplify your work reimbursement and tax claims. "
     },
     {
-      "image": "../../assets/image/saasModern/process-3.svg",
+      "image": "../../assets/image/saasModern/green.png",
       "title": "Go Green",
       "description": "12.4 million trees are cut down each year for paper receipts. That is ⅓ of the Daintree rainforest!"
     }

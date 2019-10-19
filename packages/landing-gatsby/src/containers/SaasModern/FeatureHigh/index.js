@@ -52,7 +52,7 @@ const FeatureHighSection = ({
               className="process_item_col"
             >
               <ProcessItem className="process_item">
-                <ProcessIndex>{item.index || index + 1}</ProcessIndex>
+                {/* <ProcessIndex>{item.index || index + 1}</ProcessIndex> */}
                 <Image
                   src={item.image.publicURL}
                   alt={`process-image-${index + 1}`}
@@ -123,7 +123,7 @@ FeatureHighSection.defaultProps = {
   },
   processImageStyle: {
     mb: '35px',
-    width: ['60px', '60px', '70px', 'auto'],
+    width: ['60px', '60px', '70px', '120px'],
   },
   processTitleStyle: {
     fontSize: ['20px', '18px', '20px', '20px', '20px'],

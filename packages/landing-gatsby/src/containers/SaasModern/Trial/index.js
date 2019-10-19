@@ -6,8 +6,8 @@ import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
 import Image from 'reusecore/src/elements/Image';
 import Container from 'common/src/components/UI/Container';
-
-import VendorLogos from 'common/src/assets/image/saasModern/vendor-logos.png';
+import MailChimp from 'react-mailchimp-form';
+import VendorLogos from 'common/src/assets/image/saasModern/logo.png';
 
 const TrialSection = ({
   sectionWrapper,
@@ -22,12 +22,12 @@ const TrialSection = ({
   buttonWrapper,
 }) => {
   return (
-    <Box {...sectionWrapper}>
+    <Box {...sectionWrapper} id="interested_section">
       <Container>
         <Box {...row}>
-          <Box {...imageArea}>
+          {/* <Box {...imageArea}>
             <Image {...ImageOne} src={VendorLogos} alt="VendorLogos" />
-          </Box>
+          </Box> */}
           <Box {...textArea}>
             <Heading
               {...title}
@@ -38,7 +38,17 @@ const TrialSection = ({
               content="Get started on this journey to a greener and more convenient shopping experience. We'll let you know when it's ready!"
             />
             <Box {...buttonWrapper}>
-              <Button title="SIGN UP FOR UPDATES" {...btnStyle} />
+            <MailChimp
+                action='https://gmail.us20.list-manage.com/subscribe/post?u=132aadd2b04552c5ee5fb227e&amp;id=052ebd6e4d'
+                fields={[
+                  {
+                    name: 'EMAIL',
+                    placeholder: 'Email',
+                    type: 'email',
+                    required: true
+                  }
+                ]}
+                />
             </Box>
           </Box>
         </Box>
@@ -96,6 +106,7 @@ TrialSection.defaultProps = {
   ImageOne: {
     ml: 'auto',
     mr: 'auto',
+    width: ['60px', '60px', '70px', '400px'],
   },
   buttonWrapper: {
     flexBox: true,

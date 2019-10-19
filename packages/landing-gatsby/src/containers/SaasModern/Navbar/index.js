@@ -62,7 +62,7 @@ const Navbar = ({ navbarStyle, logoStyle, logoWrapper, button, row, menuWrapper 
               menuItems={Data.saasModernJson.MENU_ITEMS}
               offset={-70}
             />
-            <a href="#1" className="navbar_button">
+            <a href="#interested_section" className="navbar_button">
               <Button {...button} title="SIGN UP FOR UPDATES" />
             </a>
             <Drawer
@@ -78,7 +78,7 @@ const Navbar = ({ navbarStyle, logoStyle, logoWrapper, button, row, menuWrapper 
                 drawerClose={true}
                 offset={-100}
               />
-              <a href="#1" className="navbar_drawer_button">
+              <a href="#interested_section" className="navbar_drawer_button">
                 <Button {...button} title="SIGN UP FOR UPDATES" />
               </a>
             </Drawer>
