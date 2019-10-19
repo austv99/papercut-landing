@@ -13,7 +13,7 @@ export const BannerWrapper = styled.section`
 
   img {
     position: absolute;
-    margin-left: 70px;
+    margin-left: 0px;
     height: manual;
     display: block;
   }

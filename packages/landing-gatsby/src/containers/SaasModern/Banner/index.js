@@ -29,7 +29,7 @@ const BannerSection = ({
   const Data = useStaticQuery(graphql`
     query {
       bannerImage: file(
-        relativePath: { eq: "image/saasModern/banner-image.png" }
+        relativePath: { eq: "image/saasModern/lan.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1170, quality: 100) {
@@ -140,10 +140,10 @@ BannerSection.defaultProps = {
   imageWrapper: {
     // From smallest size screen (mobile to largest (desktop)) 1st index - mobile 5th- desktop.
     // Alter these values to see changes on each screen resolution
-    mr: ['-200px', '-150px', '-150px', '-150px', '-170px', '-300px'],
-    ml: ['30px', '220px', '250px', '0px', '0px'],
-    mt: ['-120px', '-150px', '-150px', '0px', '-30px'],
-    width: ['100%', '80%', '80%', '60%', '60%'],
+    mr: ['-450px', '-400px', '-400px', '-350px', '-400px'],
+    ml: ['180px', '270px', '430px', '0px', '0px'],
+    mt: ['-120px', '-120px', '-150px', '0px', '-30px'],
+    width: ['100%', '90%', '85%', '70%', '70%'],
   },
   title: {
     fontSize: ['24px', '32px', '40px', '42px', '46px'],
